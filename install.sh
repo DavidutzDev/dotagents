@@ -79,6 +79,7 @@ say
 say "instructions"
 [[ -f "$REPO/claude/CLAUDE.md" ]] && link "$REPO/claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
 [[ -f "$REPO/claude/RTK.md"    ]] && link "$REPO/claude/RTK.md"    "$HOME/.claude/RTK.md"
+[[ -f "$REPO/skills/unslop/SKILL.md" ]] && link "$REPO/skills/unslop/SKILL.md" "$HOME/.claude/unslop.md"
 if [[ -f "$REPO/AGENTS.md" && -d "$HOME/.config/opencode" ]]; then
   link "$REPO/AGENTS.md" "$HOME/.config/opencode/AGENTS.md"
 fi

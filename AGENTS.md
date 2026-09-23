@@ -10,6 +10,12 @@ Skills live in `~/.agents/skills/`. Each skill is a directory holding a `SKILL.m
 opencode reads that path directly. Claude Code only loads `~/.claude/skills/`, so
 `install.sh` symlinks each skill into it.
 
+## Writing
+
+The `unslop` skill in `skills/unslop/SKILL.md` applies to every response, not only to
+text you are asked to edit. Read it and run its pre-send check before sending. Claude
+Code loads it automatically through `@unslop.md` in `claude/CLAUDE.md`.
+
 ## RTK, the Rust Token Killer
 
 `rtk` is a CLI proxy that cuts token use on dev commands by 60 to 90 percent. In Claude
