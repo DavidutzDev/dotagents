@@ -52,8 +52,3 @@ skill.
 `SKILL.md` needs YAML frontmatter with `name` and `description`. The description is what
 the agent matches against when it decides whether to load the skill, so write it as a
 trigger condition rather than a summary.
-
-## Not tracked here
-
-`graphify` stays a real directory in `~/.claude/skills/`. It ships its own updater and
-version file, which would fight a symlink. `install.sh` leaves it alone.
