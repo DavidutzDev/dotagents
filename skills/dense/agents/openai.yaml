@@ -1,0 +1,5 @@
+interface:
+  display_name: "Dense"
+  short_description: "Dense responses. Deliver the shortest, most detailed answer for any question. Expands if required."
+policy:
+  allow_implicit_invocation: false
