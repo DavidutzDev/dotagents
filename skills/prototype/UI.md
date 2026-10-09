@@ -4,6 +4,8 @@ Generate **several radically different UI variations** on a single route, switch
 
 If the question is about logic/state rather than what something looks like, this is the wrong branch. Use [LOGIC.md](LOGIC.md).
 
+Load the `antislop` skill and `antislop-ui` before writing the variants. Variants that all reach for the same default gradient, bento grid and pill badges are not radically different.
+
 ## When this is the right shape
 
 - "What should this page look like?"

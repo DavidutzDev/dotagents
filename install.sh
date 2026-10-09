@@ -76,12 +76,23 @@ else
 fi
 
 say
+say "skills -> codex"
+# Codex reads ~/.codex/skills/. The .system subdirectory is its own, so only named
+# children get linked and it is left alone.
+if [[ -d "$HOME/.codex" ]]; then
+  link_tree skills "$HOME/.codex/skills"
+else
+  say "  skip    codex not installed"
+fi
+
+say
 say "instructions"
 [[ -f "$REPO/claude/CLAUDE.md" ]] && link "$REPO/claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
 [[ -f "$REPO/claude/RTK.md"    ]] && link "$REPO/claude/RTK.md"    "$HOME/.claude/RTK.md"
 [[ -f "$REPO/skills/unslop/SKILL.md" ]] && link "$REPO/skills/unslop/SKILL.md" "$HOME/.claude/unslop.md"
-if [[ -f "$REPO/AGENTS.md" && -d "$HOME/.config/opencode" ]]; then
-  link "$REPO/AGENTS.md" "$HOME/.config/opencode/AGENTS.md"
+if [[ -f "$REPO/AGENTS.md" ]]; then
+  [[ -d "$HOME/.config/opencode" ]] && link "$REPO/AGENTS.md" "$HOME/.config/opencode/AGENTS.md"
+  [[ -d "$HOME/.codex"          ]] && link "$REPO/AGENTS.md" "$HOME/.codex/AGENTS.md"
 fi
 
 say

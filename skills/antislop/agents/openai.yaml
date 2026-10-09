@@ -1,0 +1,3 @@
+interface:
+  display_name: "Antislop"
+  short_description: "Keep generated UI from reading as AI slop"

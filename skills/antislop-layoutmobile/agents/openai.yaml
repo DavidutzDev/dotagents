@@ -1,0 +1,3 @@
+interface:
+  display_name: "Antislop Mobile Layout"
+  short_description: "Responsive reflow, overflow and tap targets"
